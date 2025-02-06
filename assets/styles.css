@@ -1,0 +1,474 @@
+@import url('https://api.fontshare.com/v2/css?f[]=alpino@100,500,700&display=swap');
+*{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    font-family: 'Alpino', sans-serif;
+
+}
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border: 1px #fff solid;
+
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    border: 1px #fff solid;
+    background: rgb(0, 0, 0);
+  }
+  ::-webkit-scrollbar-thumb:hover{
+    background-color: #01f8c3;
+  }
+body{
+    background-color: black;
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+}
+header .navbarContent{
+    margin: 20px;
+    margin-right: 50px;
+}
+header .navbarMain{
+    margin-right: 27px;
+}
+header {
+
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px;
+    padding: 10px 20px;
+    margin-top: 1%;
+    box-sizing: border-box;
+}
+header .logo {
+    margin: 0;
+    color: white;
+    font-family: 'Alpino', sans-serif;
+    font-weight: 100;
+    font-size: 30px;
+    margin-left: 2%;
+}
+
+.navbar {
+    display: flex;
+    background-color: #FFF;
+    width: 170px;
+    height: 70px;
+    border-radius: 45px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+.navbarMain .menuText {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    font-family: 'Alpino', sans-serif;
+    font-weight: 600;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    transform: none;
+}
+
+
+.navbarContent {
+    position: absolute;
+    top: 100px;
+    right: -300px;
+    background-color: #ffffffd8;
+    font-family: 'Alpino', sans-serif;
+    padding: 15px 100px;
+    border-radius: 15px;
+    z-index: 10;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.navbarContent.show {
+    right: 0;
+    opacity: 1;
+}
+
+.navbarContent a {
+    color: #000;
+    font-size: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    margin:5px;
+    transition: 0.5s;
+}
+.navbar:hover{
+    background-color: #c5c5c5;
+}
+.navbarContent a:hover {
+    color: #ffffff;
+    transition: border-bottom 0.3s ease, color 0.3s ease;
+}
+
+.contactButton{
+    margin-left: auto;
+    background-color: #01f8c3;
+    color: #000;
+    font-size: 20px;
+    align-self: center;
+    padding: 20px 40px;
+    font-weight: 800;
+    border-radius: 45px;
+    font-family: 'Alpino', sans-serif;
+}
+.contactButton img{
+    width: 15px;
+    margin-left: 25px;
+}
+
+.contactButton + .navbarMain{
+    margin-left: 50px;
+}
+.container {
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    width: 100%; 
+    height: 80vh; 
+}
+
+h1{
+    color: #FFF;
+    text-align: center;
+    font-family: 'Alpino', sans-serif;
+    font-size: 100px;
+    font-weight: 600;
+}
+.topMain p{
+    display: flex;
+    justify-content: center;
+    color: #FFF;
+    text-align: center;
+    font-family: 'Alpino', sans-serif;
+    font-size: 75px;
+    margin-top: -5%;
+    font-weight: 300;
+}
+
+.topMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.scrollMouse {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    width: 50px;
+    height: 80px;
+    background-color:none;
+    border-radius: 30px;
+    border: 3px solid #FFF;
+    margin-top: 20px;
+    padding: 10px;
+}
+.mousePoint{
+    background-color: #FFF;
+    height: 25px;
+    width: 15px;
+    border-radius: 30px;
+    animation: moveUpDown 1.5s infinite;
+}
+.scrollText{
+    color: #ffffff79;
+    font-family: 'Alpino', sans-serif;
+    font-style:inherit;
+    font-weight: 100;
+}
+
+@keyframes moveUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(7px);
+    }
+}
+
+.aboutMe {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    /* background-color: blue; */
+    height: auto;
+    font-family: 'Alpino', sans-serif;
+}
+
+.aboutMe h2 {
+    font-size: 50px;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+}
+
+.aboutMe h3 {
+    font-size: 30px;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+}
+.quiSuije p{
+    margin-top: 5%;
+    color: #fff;
+    font-size: 30px;
+
+    width: 90%;
+    text-align: justify;
+    font-weight: 100;
+}
+.aboutMe .me{
+    display: flex;
+    flex-direction: row;   
+}
+.aboutMe .me .quiSuije{
+    width: 60%;
+    justify-content: center;
+    /* background-color: red; */
+    align-items: baseline;
+    display: flex;
+    flex-direction: column;
+}
+.aboutMe .me .quiSuije h3{
+    margin-top: 1%;
+    font-weight: 600;
+}
+.aboutMe .me .quiSuije h3 + p{
+    margin-top: 0%;
+}
+.me{
+    margin-top: 5%;
+}
+.me img{
+    margin-left: 12%;
+    width: 20%;
+}
+.me img + .quiSuije{
+    margin-left: 17%;
+}
+.aboutMeCard {
+    justify-content: center;
+    align-items: stretch;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    height: auto;
+    font-family: 'Alpino', sans-serif;
+    color: #FFF;
+    margin-top: 8%;
+}
+
+.aboutMeCard > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.aboutMeCard > div img {
+    max-width: 100px;
+    margin-bottom: 20px;
+}
+
+.aboutMeCard > div h3 {
+    font-size:40px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.aboutMeCard > div p {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 100;
+    flex-grow: 1; 
+}
+
+.project{
+    margin-top: 10%;
+    font-family: 'Alpino', sans-serif;
+
+}
+
+
+.project h2 {
+    font-size: 50px;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+}
+
+.project h3 {
+    font-size: 30px;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+}
+
+.projectAll {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 5%;
+}
+
+.projectAll h2 {
+    font-weight: 100;
+    margin: 0;
+    text-align: left;
+    
+}
+
+.projectOne {
+    display: block;
+}
+
+.projectOne p {
+    width: 70%;
+    font-size:20px;
+    font-weight: 100    ;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+/***************
+    CARROUSEL
+***************/
+/* Carrousel container */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Augmenté pour agrandir le carrousel */
+    overflow: hidden;
+    margin: 20px auto; /* Centré */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Carrousel track */
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Transition fluide entre les images */
+    width: 300%; /* Ajouté pour s'assurer que tout s'affiche horizontalement */
+}
+
+/* Images dans le carrousel */
+.carousel-container img {
+    width: 100%; /* Les images occupent 100% du conteneur */
+    height: auto;
+    object-fit: cover;
+}
+
+/* Boutons du carrousel */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+/* Boutons : effet au survol */
+.carousel-button:hover {
+    background-color: #01f8c3;
+}
+.line {
+    width: 90%; /* Ajustez la largeur selon vos besoins */
+    height: 2px; /* Épaisseur de la ligne */
+    background-color: white; /* Couleur de la ligne */
+    margin: 30px auto; /* Centrer la ligne et ajouter de l'espacement autour */
+    border-radius: 1px; /* Arrondir légèrement les bords si souhaité */
+}
+.carousel + .line{
+    margin-top: 10%;
+}
+
+
+.contactMain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+.contactMain a{
+    color: #fff;
+    font-size: 100px;
+}
+footer{
+   
+    padding-left: 10%;
+    color: #FFF;
+    width: 100%;
+    height: 100%;
+    background-color: #01f8c3;
+
+}
+footer p{
+    color: #000;
+    font-weight: 100;
+    width: 30%;
+    font-size: 25px;
+}
+footer h2{
+    font-size: 40px;
+}
