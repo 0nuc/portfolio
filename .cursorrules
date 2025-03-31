@@ -1,0 +1,64 @@
+{
+  "name": "Portfolio Web Personnel",
+  "description": "Règles pour le développement du portfolio en HTML, CSS natif et JavaScript",
+  "version": "1.0.0",
+  "rules": [
+    {
+      "name": "Architecture du projet",
+      "description": "Le projet est un portfolio de développement web qui utilise uniquement HTML, CSS natif et JavaScript. Tous les éléments principaux sont présents sur la page d'index.",
+      "constraints": [
+        "Utiliser uniquement HTML5, CSS3 et JavaScript vanilla",
+        "Ne pas utiliser de frameworks ou bibliothèques externes",
+        "Tout le contenu principal doit être accessible depuis index.html"
+      ]
+    },
+    {
+      "name": "Responsive Design",
+      "description": "Le site doit être entièrement responsive et s'adapter à tous les formats d'écran.",
+      "constraints": [
+        "Utiliser des Media Queries pour adapter le design",
+        "Implémenter une approche mobile-first",
+        "Tester sur différentes résolutions: mobile, tablette, desktop",
+        "Utiliser des unités relatives (%, em, rem) plutôt que des valeurs fixes en pixels"
+      ]
+    },
+    {
+      "name": "Organisation du code",
+      "description": "Le code doit être bien organisé et suivre les bonnes pratiques de développement web.",
+      "constraints": [
+        "Séparer les préoccupations: HTML pour la structure, CSS pour le style, JS pour l'interactivité",
+        "Utiliser des commentaires clairs pour documenter le code",
+        "Adopter une nomenclature cohérente pour les classes et identifiants",
+        "Optimiser les performances en minimisant les requêtes HTTP"
+      ]
+    },
+    {
+      "name": "Compatibilité",
+      "description": "Le site doit fonctionner sur les principaux navigateurs modernes.",
+      "constraints": [
+        "Tester la compatibilité sur Chrome, Firefox, Safari et Edge",
+        "Utiliser des préfixes vendeurs pour les propriétés CSS expérimentales si nécessaire"
+      ]
+    },
+    {
+      "name": "Performance",
+      "description": "Le site doit être optimisé pour des temps de chargement rapides.",
+      "constraints": [
+        "Optimiser les images et ressources",
+        "Minimiser l'utilisation de scripts bloquants",
+        "Implémenter le chargement différé (lazy loading) si nécessaire"
+      ]
+    }
+  ],
+  "workflow": {
+    "developmentProcess": [
+      "Concevoir la maquette du site",
+      "Développer la structure HTML",
+      "Implémenter les styles CSS",
+      "Ajouter l'interactivité avec JavaScript",
+      "Tester le responsive design",
+      "Optimiser les performances",
+      "Déployer le site"
+    ]
+  }
+}

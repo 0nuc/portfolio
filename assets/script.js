@@ -1,54 +1,103 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const navbarMain = document.getElementById("navbarMain");
-    const menuText = document.getElementById("menuText");
-    const navbarContent = document.getElementById("navbarContent");
+  const navbarMain = document.getElementById("navbarMain");
+  const menuText = document.getElementById("menuText");
+  const navbarContent = document.getElementById("navbarContent");
 
-    navbarMain.addEventListener("click", function () {
-        // Bascule le texte MENU <=> CLOSE
-        if (menuText.textContent === "MENU") {
-            menuText.textContent = "CLOSE";
-            navbarContent.classList.add("show"); // Ajoute la classe pour afficher avec animation
-        } else {
-            menuText.textContent = "MENU";
-            navbarContent.classList.remove("show"); // Retire la classe pour masquer
-        }
+  // Fonction pour fermer le menu
+  function closeMenu() {
+    menuText.textContent = "MENU";
+    navbarContent.classList.remove("show");
+  }
+
+  // Gestionnaire de clic pour le bouton du menu
+  navbarMain.addEventListener("click", function (e) {
+    e.preventDefault();
+    if (menuText.textContent === "MENU") {
+      menuText.textContent = "CLOSE";
+      navbarContent.classList.add("show");
+    } else {
+      closeMenu();
+    }
+  });
+
+  // Fermer le menu quand on clique en dehors
+  document.addEventListener("click", function (e) {
+    if (!navbarMain.contains(e.target) && !navbarContent.contains(e.target)) {
+      closeMenu();
+    }
+  });
+
+  // Fermer le menu quand on clique sur un lien
+  navbarContent.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", closeMenu);
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const buttonDown = document.querySelector(".buttonDown");
+  const containerOne = document.querySelector(".containerOne");
+  const line = document.querySelector(".line");
+
+  buttonDown.addEventListener("click", function () {
+    // Toggle les classes active
+    containerOne.classList.toggle("active");
+    line.classList.toggle("active");
+    buttonDown.classList.toggle("active");
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const projectElements = document.querySelectorAll(".projectAll");
+
+  projectElements.forEach((projectElement) => {
+    projectElement.addEventListener("click", function () {
+      this.classList.toggle("expanded");
     });
+  });
 });
+// Ajouter ce code à la fin de ton fichier script.js
 
-// Sélectionner les éléments
-const carouselContainer = document.querySelector('.carousel-container');
-const images = document.querySelectorAll('.carousel-container img');
-const prevButton = document.querySelector('.carousel-button.prev');
-const nextButton = document.querySelector('.carousel-button.next');
+// Validation du formulaire de contact
+document.addEventListener("DOMContentLoaded", function () {
+  const contactForm = document.querySelector(".contactForm");
 
-// Variables pour le suivi
-let currentIndex = 0;
+  if (contactForm) {
+    contactForm.addEventListener("submit", function (event) {
+      event.preventDefault();
 
-// Fonction pour mettre à jour la position
-function updateCarousel() {
-    const width = images[0].clientWidth; // Largeur d'une image
-    carouselContainer.style.transform = `translateX(-${currentIndex * width}px)`; // Déplace le conteneur
-}
+      // Récupérer les valeurs du formulaire
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const subject = document.getElementById("subject").value;
+      const message = document.getElementById("message").value;
 
-// Écouteurs pour les boutons
-nextButton.addEventListener('click', () => {
-    if (currentIndex < images.length - 1) {
-        currentIndex++;
-    } else {
-        currentIndex = 0; // Revenir au début
-    }
-    updateCarousel();
+      // Validation simple
+      if (name.trim() === "" || email.trim() === "" || message.trim() === "") {
+        alert("Veuillez remplir tous les champs obligatoires.");
+        return;
+      }
+
+      // Validation de l'email avec une expression régulière simple
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        alert("Veuillez entrer une adresse email valide.");
+        return;
+      }
+
+      // Simulation d'envoi du formulaire (à remplacer par ton système d'envoi réel)
+      const submitButton = document.querySelector(".submitButton");
+      const originalButtonText = submitButton.innerHTML;
+
+      submitButton.innerHTML = "ENVOI EN COURS...";
+      submitButton.disabled = true;
+
+      // Simuler un délai d'envoi (à remplacer par ton appel API réel)
+      setTimeout(function () {
+        alert("Merci ! Votre message a été envoyé avec succès.");
+        contactForm.reset();
+        submitButton.innerHTML = originalButtonText;
+        submitButton.disabled = false;
+      }, 1500);
+    });
+  }
 });
-
-prevButton.addEventListener('click', () => {
-    if (currentIndex > 0) {
-        currentIndex--;
-    } else {
-        currentIndex = images.length - 1; // Aller à la dernière image
-    }
-    updateCarousel();
-});
-
-// Mettre à jour au chargement
-window.addEventListener('resize', updateCarousel);
-updateCarousel();

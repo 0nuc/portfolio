@@ -1,30 +1,32 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>joris.noel</title>
     <link rel="stylesheet" href="assets/styles.css">
 </head>
+
 <body>
     <header>
         <h2 class="logo">joris.noel</h2>
-        <a href="" class="contactButton">CONTACT ME <img src="assets/message-solid.svg" alt=""></a>
-        <a class="navbarMain" id="navbarMain" href="#">
-            <div class="navbar">
-                <p class="menuText" id="menuText">MENU</p> 
+        <nav class="nav-container">
+            <a href="#contact" class="contactButton">CONTACT ME</a>
+            <button class="navbarMain" id="navbarMain">
+                <span class="menuText" id="menuText">MENU</span>
+            </button>
+            <div id="navbarContent" class="navbarContent">
+                <a href="#home" class="home">Home</a>
+                <a href="#project" class="project">Project</a>
+                <a href="#contact" class="contact1">Contact</a>
             </div>
-        </a>
-        <div id="navbarContent" class="navbarContent">
-            <a href="" class="home"><span style="color: #a8a8a8;">Home</span></a>
-            <a href="#project" class="project">Project</a>
-            <a href="" class="certif">Certification</a>
-            <a href="#contact" class="contact">Contact</a>
-        </div>
+        </nav>
     </header>
     <main>
         <div class="container">
-            <div class="topMain">
+            <div class="topMain" id="#home">
                 <h1>JORIS NOEL</h1>
                 <p>DEVELOPEUR FULLSTACK ET<span style="color: #01f8c3;">&nbsp; LOGICIEL</span></p>
                 <div class="scrollMouse">
@@ -37,10 +39,11 @@
             <h2 class="aboutMeTitle">A PROPOS</h2>
             <h3>Un développeur passionné</h3>
             <div class="me">
-                <img src="assets/python_color.png" id="about"  alt="" class="pythonLogo">
+                <img src="assets/python_color.png" id="about" alt="" class="pythonLogo">
                 <div class="quiSuije">
                     <h3>Qui <span style="color: #01f8c3;" >suis-je </span></h3>
-                    <p>Je m'appelle Joris, un jeune développeur passionné par le web design, le développement FullStack, ainsi que la création de logiciels, notamment avec React, Java et Python. En particulier, j'apprécie énormément <span style="color: #01f8c3;" >Python</span>, un langage puissant, robuste et polyvalent. Avec un peu de créativité et de connaissances, Python permet de réaliser une grande variété de projets, qu'il s'agisse d'applications web, mobiles ou bien d'autres encore.</p>
+                    <p>Je m'appelle Joris, un jeune développeur passionné par le web design, le développement FullStack, ainsi que la création de logiciels, notamment avec React, Java et Python. En particulier, j'apprécie énormément <span style="color: #01f8c3;">Python</span>,
+                        un langage puissant, robuste et polyvalent. Avec un peu de créativité et de connaissances, Python permet de réaliser une grande variété de projets, qu'il s'agisse d'applications web, mobiles ou bien d'autres encore.</p>
                 </div>
             </div>
             <div class="aboutMeCard">
@@ -52,34 +55,158 @@
                 <div class="cardSecond">
                     <img src="assets/design_color.png" alt="Design">
                     <h3 class="cardSecondTitle">Design UI/UX</h3>
-                    <p>Je conçois des interfaces utilisateur intuitives et élégantes en me basant sur les maquettes fourni ou celle que j'ai fait en avance sur l'outil Figma, en mettant l'accent sur l'expérience utilisateur (UX) et des designs modernes et attrayants.</p>
+                    <p>Je conçois des interfaces utilisateur intuitives et élégantes en me basant sur les maquettes fourni ou celle que j'ai fait en avance sur l'outil Figma, en mettant l'accent sur l'expérience utilisateur (UX) et des designs modernes et
+                        attrayants.</p>
                 </div>
                 <div class="cardThird">
                     <img src="assets/logiciel_color.png" alt="Logiciel">
                     <h3 class="cardThirdTitle">Développement Logiciel</h3>
                     <p>Création d'applications mobiles et logicielles robustes et performantes principalement en Pyhton mais aussi en java tout en s'assurant de leurs bon fonctionnement va des tests d'integration (JUNITE5),avant la mise en prod des outils.</p>
                 </div>
-            </div>            
-        </div>
-        <div class="project" id="project" >
-            <h2 class="aboutMeTitle">MES PROJETS</h2>
-            <h3>Projet récent sur lesquelle j'ai travaillé</h3>
-            <div class="projectAll">
-                <div class="projectOne">
-                    <h2 class="projectOneTitle">Portfolio joris.noel</h2>
-                    <P>Description: Pour la création du portfolio j'ai d'abord du mettre en place une maquette sur Figma du site final pour avoir une ligne directrice. Le site actuel est coder en <span style="color: #01f8c3;">HTML</span> & <span style="color: #01f8c3;">CSS</span> ainsi que du <span style="color: #01f8c3;">JavaScript</span> pour certain élément.</P>
-                    <div class="carousel">
-                        <div class="carousel-container">
-                            <img src="assets/portfolio_one.png" alt="Image 1">
-                            <img src="assets/portfolio_2.png" alt="Image 2">
-                            <img src="assets/portfolio_3.png" alt="Image 3">
-                        </div>
-                        <button class="carousel-button prev">&lt;</button>
-                        <button class="carousel-button next">&gt;</button>
-                    </div>
-                    <div class="line"></div>
             </div>
         </div>
+        <div class="project" id="project">
+            <h2 class="aboutMeTitle marg5">MES PROJETS.</h2>
+            <h3 class="marg5">Projet récent sur lesquelle j'ai travaillé</h3>
+            <div class="projectAll first">
+                <div class="containerOne">
+                    <p1>-</p1>
+                    <img src="assets/2.png" alt="">
+                    <div class="projectOne">
+                        <h2 class="projectOneTitle">Portfolio joris.noel</h2>
+                    </div>
+                    <div class="number">
+                        <p>1</p>
+                        <p class="bg2">Projet Personnel</p>
+                    </div>
+                </div>
+                <div class="expandedContent">
+                    <div class="projectDetails">
+                        <div class="detailsText">
+                            <h3>Détails du Projet</h3>
+                            <p>Se projet avais pour but de mettre en place un portfolio professionel et compréhensible pour tout visiteur voulant en apprendre plus sur moi. Pour la création de se portfolio j'ai utiliser du HTML ansi que du CSS avec un peut
+                                de Java Script pour le rendre plsu agrèable </p>
+                        </div>
+                        <div class="imagesGrid">
+                            <div class="mainImage">
+                                <img src="assets/portfolio_one.png" alt="Image principale du projet">
+                            </div>
+                            <div class="secondaryImages">
+                                <img src="assets/portfolio_2.png" alt="Image secondaire du projet">
+                                <img src="assets/portfolio_3.png" alt="Image secondaire du projet">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="projectAll second">
+                <div class="containerOne">
+                    <p1>-</p1>
+                    <img class="mobileImg" src="assets/MealFinder.png" alt="">
+                    <div class="projectOne">
+                        <h2 class="projectOneTitle cl2">MealPrepFinder</h2>
+                    </div>
+                    <div class="number">
+                        <p>2</p>
+                    </div>
+                </div>
+                <div class="expandedContent">
+                    <div class="projectDetails">
+                        <div class="detailsText">
+                            <h3>Détails du Projet</h3>
+                            <p>Sse projet avais pour but de me former au react native ainsi qu'au prisma et au express js. le projet en lui même est une application mobile aidant les utilisateurs à trouver des recettes équilibrées rapides à préparer pour pouvoir les aider à atteindre leurs objectifs en précisant les kcal par recette ainsi que les macro nutriments.</p>
+                        </div>
+                        <div class="mobileDashboard">
+                            <div class="phoneWrapper">
+                                <div class="phoneFrame">
+                                    <img src="assets/first.PNG" alt="Page de connexion">
+                                </div>
+                            </div>
+                            <div class="phoneWrapper">
+                                <div class="phoneFrame">
+                                    <img src="assets/second.jpg" alt="Page d'accueil">
+                                </div>
+                            </div>
+                            <div class="phoneWrapper">
+                                <div class="phoneFrame">
+                                    <img src="assets/third.png" alt="Page de profil">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Ajouter cette section après la div "project" dans index.html -->
+            <div class="contact" id="contact">
+                <h2 class="contactTitle">CONTACTEZ-MOI</h2>
+                <h3>Envoyez-moi un message pour discuter de vos projets</h3>
+
+                <div class="contactContainer">
+                    <div class="contactInfo">
+                        <div class="infoItem">
+                            <h4>Email</h4>
+                            <p>joris.noel12@gmail.com</p>
+                        </div>
+                        <div class="infoItem">
+                            <h4>Localisation</h4>
+                            <p>Lyon, France</p>
+                        </div>
+
+                    </div>
+
+                    <form class="contactForm">
+                        <div class="formGroup">
+                            <label for="name">Nom</label>
+                            <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                        </div>
+
+                        <div class="formGroup">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Votre email" required>
+                        </div>
+
+                        <div class="formGroup">
+                            <label for="subject">Sujet</label>
+                            <input type="text" id="subject" name="subject" placeholder="Sujet de votre message">
+                        </div>
+
+                        <div class="formGroup">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Votre message" rows="6" required></textarea>
+                        </div>
+
+                        <a href="mailto:joris.noel12@gmail.com" type="submit" class="submitButton">ENVOYER <img src="assets/send-icon.svg" alt=""></a>
+                    </form>
+                </div>
+            </div>
+
+            <footer>
+                <div class="footerContent">
+                    <div class="footerLogo">
+                        <h2>joris.noel</h2>
+                        <p>Développeur FullStack & Logiciel</p>
+                    </div>
+
+                    <div class="footerLinks">
+                        <div class="linkColumn">
+                            <h4>Navigation</h4>
+                            <a href="#">Accueil</a>
+                            <a href="#project">Projets</a>
+                            <a href="#contact">Contact</a>
+                        </div>
+
+                        <div class="linkColumn">
+                            <h4>Suivez-moi</h4>
+                            <a href="https://github.com/0nuc" target="_blank">GitHub</a>
+                            <a href="https://www.linkedin.com/in/joris-no%C3%ABl-14326a239/" target="_blank">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footerBottom">
+                    <p>&copy; 2025 Joris Noel. Tous droits réservés.</p>
+                </div>
+            </footer>
 
 
 
@@ -91,18 +218,9 @@
 
 
 
-        <!--CONTACT PART-->
-        <div class="contactMain">
-            <a href="" class="contactTitle"><span style="color: #01f8c3;">joris.noel12</span>@gmail.com</a>
-        </div>
-    </main>
-    <footer>
-        <div class="footerInfo" id="#contact" >
-            <h2>NOEL <span style="color: #000000;" >Joris</span></h2>
-            <p>Je m'appelle Joris, un jeune développeur passionné par le web design, le développement FullStack, ainsi que la création de logiciels.</p>
-        </div>
-    </footer>
 
-    <script src="assets/script.js"></script>
+            <script src="assets/script.js"></script>
+
 </body>
+
 </html>
